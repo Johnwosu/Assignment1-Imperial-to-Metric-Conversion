@@ -32,15 +32,17 @@ totalOunces = 35840 * tons + 224 * stones + 16 * pounds + ounces
 totalKilos = totalOunces / 35.274
 
 
-#--Calculation using Variables
+#--Convert to ounces--
 totalOunces = (35840 * tons) + (224 * stones) + (16 * pounds) + ounces
+
+#--Convert ounces to kilos
 totalKilos = totalOunces / 35.274
-metricTons = int(totalKilos / 1000)
+
+#--Analysing metric tons, kilos and grams---#
+metricTons = int(totalKilos // 1000)
 remainingKilos = int(totalKilos % 1000)
 grams = (totalKilos - (metricTons * 1000 + remainingKilos)) * 1000
-kilos = totalKilos + remainingKilos
-metricTons = int(kilos /1000)
 
 #<-----Output--------->
-print("The metric weight is {0} metric tons, {1} kilos, and {2:.1f} grams".format(metricTons, kilos, grams))
+print("The metric weight is {0} metric tons, {1} kilos, and {2:.1f} grams".format(metricTons, remainingKilos, grams))
 
