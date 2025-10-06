@@ -27,3 +27,17 @@ stones = input("Enter the number of stones: ")
 pounds = float(input("Enter the number of pounds: "))
 ounces = float(input("Enter the number of ounces: "))
 
+# Required Formula---
+totalOunces = 35840 * tons + 224 * stones + 16 * pounds + ounces
+totalKilos = totalOunces / 35.274
+metricTons = Int(Kilos/1000)
+
+#--Calculation using Variables
+totalOunces = (35840 * tons) + (224 * stones) + (16 * pounds) + ounces
+totalKilos = totalOunces / 35.274
+metricTons = int(totalKilos / 1000)
+remainingKilos = int(totalKilos % 1000)
+grams = (totalKilos - (metricTons * 1000 + remainingKilos)) * 1000
+
+#<-----Output--------->
+
